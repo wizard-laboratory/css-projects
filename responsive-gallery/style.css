@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #191E24;
+}
+.card {
+  background: url("https://images.unsplash.com/photo-1683009427500-71296178737f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80")
+  no-repeat center center;
+  background-size: cover;
+  width: 90%;
+  height: 150px;
+}
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
