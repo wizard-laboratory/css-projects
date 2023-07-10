@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+ body {
+	 font-family: 'Oswald', sans-serif;
+	 background: #fff;
+}
+ body section {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+body section .row {
+    display: inline-block;
+}
+.column {
+    display: inline-block;
+    margin: 20px;
+}
+.card {
+	  height: 400px;
+	  width: 400px;
+	  margin: 10px 0;
+	  transition: ease all 2.3s;
+  	perspective: 1200px;
+    display: inline-block;
+}
+.card:hover .cover {
+	  transform: rotateX(0deg) rotateY(-180deg);
+}
+.card:hover .cover:before {
+	  transform: translateZ(30px);
+}
+.card:hover .cover:after {
+	  background-color: black;
+}
+.card:hover .cover h1 {
+	  transform: translateZ(100px);
+}
+.card:hover .cover .price {
+	  transform: translateZ(60px);
+}
+.card:hover .cover a {
+	  transform: translateZ(-60px) rotatey(-180deg);
+}
+.card .cover {
+	  position: absolute;
+	  height: 100%;
+ 	  width: 100%;
+ 	  transform-style: preserve-3d;
+	  transition: ease all 1s;
+	  background-size: cover;
+	  background-position: center center;
+	  background-repeat: no-repeat;
+}
+.card .cover:before {
+	  content: '';
+	  position: absolute;
+	  border: 5px solid rgba(255, 255, 255, .5);
+	  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+	  top: 20px;
+	  left: 20px;
+	  right: 20px;
+	  bottom: 20px;
+	  z-index: 2;
+	  transition: ease all 2.3s;
+	  transform-style: preserve-3d;
+	  transform: translateZ(0px);
+}
+.card .cover:after {
+	  content: '';
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  right: 0px;
+	  bottom: 0px;
+	  z-index: 2;
+	  transition: ease all 1.3s;
+	  background: rgba(0, 0, 0, .4);
+}
+.card .cover.item-a {
+	  background-image: url('https://images.unsplash.com/photo-1517202058079-41d919c02222?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+}
+
+.card .cover h1 {
+	  font-weight: 600;
+	  position: absolute;
+	  bottom: 55px;
+	  left: 50px;
+	  color: white;
+	  transform-style: preserve-3d;
+	  transition: ease all 2.3s;
+	  z-index: 3;
+	  font-size: 3em;
+	  transform: translateZ(0px);
+}
+.card .cover .price {
+	  font-weight: 200;
+	  position: absolute;
+	  top: 55px;
+	  right: 50px;
+	  color: white;
+	  transform-style: preserve-3d;
+	  transition: ease all 2.3s;
+	  z-index: 4;
+	  font-size: 2em;
+	  transform: translateZ(0px);
+}
+.card .card-back {
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  background: #222;
+	  transform-style: preserve-3d;
+	  transition: ease all 2.3s;
+	  transform: translateZ(-1px);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+}
+.card .card-back a {
+	  transform-style: preserve-3d;
+ 	  transition: ease transform 2.3s, ease background 0.5s;
+	  transform: translateZ(-1px) rotatey(-180deg);
+	  background: transparent;
+	  border: 1px solid white;
+	  font-weight: 200;
+	  font-size: 1.3em;
+	  color: white;
+	  padding: 14px 32px;
+	  outline: none;
+	  text-decoration: none;
+}
+.card .card-back a:hover {
+	  background-color: white;
+	  color: #0b0f08;
+}
+ 
