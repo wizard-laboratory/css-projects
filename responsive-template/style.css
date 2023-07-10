@@ -1,0 +1,238 @@
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Cormorant:wght@300;400;500;600;700&family=Fjalla+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Indie+Flower&family=Jost:wght@600&family=Marcellus&family=Montserrat:wght@400;600;700;900&family=Nanum+Brush+Script&family=Nothing+You+Could+Do&family=Noto+Serif:wght@700&family=Open+Sans:wght@300;400;500;600&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Reenie+Beanie&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rock+Salt&family=Sedgwick+Ave&family=Shantell+Sans:ital@1&family=Short+Stack&family=Urbanist:wght@600&family=Wix+Madefor+Display:wght@700&display=swap');
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: local("ClashDisplay"),
+       url("/fonts/ClashDisplay-Medium.otf") format("otf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  box-sizing:border-box;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+	height:100%;
+}
+body{
+	font-family: 'Clash Display', sans-serif;
+	background-color: #f5f5fa;
+  line-height: 1;
+}
+a{
+	text-decoration: none;
+}
+h1, h2, .nav-logo{
+	font-family: 'Clash Display', sans-serif;
+}
+.footer{
+	height: 200px;
+	display: block;
+}
+/* Width Setting*/
+.nav-hold, .container, .image-grid, .form-container{
+	width: 95%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* Navigation */
+.nav-bar{
+	width: 100%;
+	background: #222;
+}
+.nav-hold{
+	overflow: hidden;
+}
+.nav-logo{
+	float:left;
+	display:block;
+	padding:20px 10px;
+	color: #f9f9f9;
+	font-weight: 400;
+  font-size: 20px;
+}
+.nav-list{
+	float: right;
+}
+.nav-list li{
+	float: left;
+}
+.nav-list li a{
+	display: block;
+	padding: 20px 10px;
+	color: #f9f9f9;
+  font-size: 20px;
+}
+.nav-menu{
+	display: none;	
+}
+/*Container*/
+.container{
+	padding:50px 10px 10px 10px;
+}
+.container h1,
+.container h2,
+.form-container h2{
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 20px; 
+	text-transform: uppercase;
+}
+.container h2,
+.form-container h2{
+	margin-top: 35px;
+}
+.container p{
+	line-height: 1.35em;
+  font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 20px; 
+  font-family: 'Poppins', sans-serif;
+}
+/*Image Grid*/
+.image-grid,
+.form-container{
+	overflow:hidden;
+	padding: 5px;
+}
+.image-grid-square{
+	width: 20%;
+	float: left;
+	padding: 5px;
+	overflow: hidden
+}
+.image-grid-square img{
+	width: 100%;
+	float:left;
+}
+/*Form container*/
+.form-section{
+	width: 25%;
+	float:left;
+	padding: 5px;
+}
+.message-section,
+.submit-section{
+	width: 100%
+}
+.form-section label{
+	display: block;
+	padding-bottom: 2px;
+	text-transform: uppercase;
+	font-size: .85em;
+	letter-spacing: .1em;
+}
+.form-section input,
+.form-section textarea{
+	width: 100%;
+	padding-bottom: 5px 10px;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	border: none;
+}
+.form-section input {
+  border: 2px solid #000;
+}
+.form-section input:focus,
+.form-section textarea:focus{
+	color: #252525;
+	background: #C4E9F5;
+}
+.form-section textarea{
+	resize:none;
+	height: 150px;
+	padding:10px;
+  border: 2px solid #000;
+}
+.form-section input.submit-button{
+	float: none;
+	display: block;
+	border:none;
+	outline: none;
+	background: #111;
+	color: #f9f9f9;
+	padding: 15px 10px;
+	cursor: pointer;
+	max-width: 500px;
+	margin: 0 auto;
+	font-family: 'Clash Display', sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: .25em;
+}
+/* IE 10+ Viewport fix*/
+@-ms-viewport { width:device-width; }
+@viewport { width:device-width; }
+/*Tablet*/
+@media screen and (max-width:1024px){
+
+	.image-grid-square{
+	width: 25%;
+}
+.form-section{
+	width:50%;
+}
+.message-section,
+.submit-section{
+	width: 100%
+}
+}
+/* Phone - 767px */
+@media screen and (max-width:768px){
+	.nav-menu{
+		float:right;
+		color: #f9f9f9;
+		display: block;
+		padding: 20px 10px;
+		cursor: pointer;
+	}
+	.nav-list{
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		height: 0;
+	}
+
+	.nav-open{
+		height:auto;
+	}
+
+	.nav-list li{
+		width: 100%;
+	}
+	.image-grid-square{
+	width: 50%;
+}
+}
+/* Phone - 400px */
+@media screen and (max-width:400px){
+	.image-grid-square{
+	width: 100%;
+	}
+	
+	.form-section
+{
+		width: 100%
+	}
+}
