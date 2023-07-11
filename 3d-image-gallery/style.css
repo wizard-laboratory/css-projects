@@ -1,0 +1,66 @@
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Cormorant:wght@300;400;500;600;700&family=Fjalla+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Indie+Flower&family=Jost:wght@600&family=Marcellus&family=Montserrat:wght@400;600;700;900&family=Nanum+Brush+Script&family=Nothing+You+Could+Do&family=Noto+Serif:wght@700&family=Open+Sans:wght@300;400;500;600&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Reenie+Beanie&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rock+Salt&family=Sedgwick+Ave&family=Shantell+Sans:ital@1&family=Short+Stack&family=Urbanist:wght@600&family=Wix+Madefor+Display:wght@700&display=swap');
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: local("ClashDisplay"),
+       url("/fonts/ClashDisplay-Medium.otf") format("otf");
+}
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #000;
+	background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	overflow: hidden;
+}
+.gallery {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation: slid 20s linear infinite;
+	&:hover {
+		animation-play-state: paused;
+	  }
+}
+.gallery span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform-style: preserve-3d;
+	transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+.gallery span img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+	transition: 2s;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+.gallery span:hover img {
+	filter: grayscale(1)
+}
+@keyframes slid {
+	0% {
+	  transform: perspective(1000px) rotateY(0deg);
+	}
+	100% {
+	  transform: perspective(1000px) rotateY(360deg);
+	}
+}
+  
