@@ -1,0 +1,50 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	min-height: 100vh;
+	padding: 30px;
+}
+.cards {
+	display: flex;
+}
+.card {
+	margin: 10px;
+	width: 300px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.card .image img {
+	max-width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.card .content {
+	padding: 20px 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+.card.skeleton .image, .card.skeleton h2, .card.skeleton p {
+	background: #eee;
+	background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+	border-radius: 5px;
+	background-size: 200% 100%;
+	animation: 1.5s loader linear infinite;
+}
+.card.skeleton .image {
+	height: 200px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.card.skeleton h2 {
+	height: 30px;
+}
+.card.skeleton p {
+	height: 70px;
+}
+@keyframes loader {
+	to {
+		background-position-x: -200%;
+   }
+}
