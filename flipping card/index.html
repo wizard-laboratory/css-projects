@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping card</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-side front">
+          <div>Front Side</div>
+        </div>
+        <div class="card-side back">
+          <div>Back Side</div>
+        </div>
+    </div>
+    <style>
+        body {
+  font-family: Roboto;
+  background: #FFF4E2;
+  font-size: 30px;
+  cursor:url("https://i.ibb.co/znc4JFh/cursor-1.png"), auto;
+}
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%);
+}
+.card-side.front {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+.card {
+  perspective: 150rem;
+  margin: 2em auto;
+  height: 40rem;
+  max-width: 400px;
+  box-shadow: none;
+  background: none;
+}
+.card-side {
+  height: 25rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding: 2rem;
+  color: white;
+}
+
+    </style>
+</body>
+</html>
